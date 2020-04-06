@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>My Portfolio-PRACHI SINGH</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">Details</a>
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="contact.html">Contacts</a>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="content-wrapper">
+      <div class="two-column-wrapper">
+        <div class="profile-image-wrapper" >
+          <img src="images/prachi.jpeg" alt="" >
+          
+        </div>
+
+        <div class="profile-content-wrapper">
+          <h1>Hi, thanks for visiting my site.</h1>
+          <p>Currently a second year undergraduate student at SRM University Chennai, I study Computer Science Engineering. My prime focus has always been on developing proficiency and excelling in whatever I do, be it Web development or Computer Vision, I am never hesitent to try my hands on these skills. My aim is to integrate CV, Web and AI for the advancement of mankind.   
+          </p>
+
+          <p>Hope you all guys enjoy viewing my portfolio. Feel free to contact me in case of any queries, I will be more than happy to help you! </p>
+            <p>Also do let me know what you guys think about the page. Suggestions are always welcome.</p>
+            <p>Swipe next to know more about me and my work!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+</html>
